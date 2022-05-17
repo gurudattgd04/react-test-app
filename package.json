@@ -17,11 +17,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test cypress:open",
     "eject": "react-scripts eject",
-    "cypress:open": "percy build:wait -f -- cypress run"
+    "cypress:open": "percy exec -- cypress run"
   },
   "eslintConfig": {
     "extends": [
