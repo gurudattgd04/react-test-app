@@ -15,6 +15,9 @@ jobs:
           wait-on: 'http://localhost:3006'
           # the entire command will automatically be prefixed with "npm"
           # and we need the second "npm" to execute "cypress run ..." command line.
-          command-prefix: 'percy exec -- npx'
+      - name: Run tests
+        uses: percy/exec-action@v0.3.1
+        with:
+          custom-command: "npm run cypress:open"
         env:
           PERCY_TOKEN: e7f48169aab70eb5df4c7f923c7c78fb65cc6380494679877bb21a963ae32ecc
