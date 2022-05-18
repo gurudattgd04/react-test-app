@@ -1,11 +1,5 @@
-name: CI
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+name: Tests
+on: push
 jobs:
   build-test-lint-typecheck-e2e:
     runs-on: ubuntu-latest
